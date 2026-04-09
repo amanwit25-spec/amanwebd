@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames and Iframe Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 90vh;
+        }
+
+        .left-frame {
+            width: 30%;
+            background: #ffffff;
+            padding: 20px;
+            border-right: 3px solid #4CAF50;
+            box-sizing: border-box;
+        }
+
+        .left-frame h2 {
+            color: #333;
+        }
+
+        .left-frame a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .left-frame a:hover {
+            color: #ff5722;
+        }
+
+        .right-frame {
+            width: 70%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Frames / Iframe Demo</h1>
+
+    <div class="container">
+        <!-- Left Frame -->
+        <div class="left-frame">
+            <h2>Menu</h2>
+            <a href="https://www.wikipedia.org" target="contentFrame">Open Wikipedia</a>
+            <a href="https://www.example.com" target="contentFrame">Open Example Page</a>
+            <a href="https://www.openstreetmap.org/export/embed.html" target="contentFrame">Open Map</a>
+            <a href="https://www.google.com" target="contentFrame">Open Google</a>
+        </div>
+
+        <!-- Right Frame using iframe -->
+        <div class="right-frame">
+            <iframe name="contentFrame" src="https://www.example.com"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
